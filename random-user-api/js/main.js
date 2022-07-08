@@ -60,6 +60,6 @@ fetchUser()
 
 // on click fetch button event listener
 const btn = document.querySelector('#fetch-btn')
-btn.addEventListener('click', ()=>{
-    fetchUser()
+btn.addEventListener('click',async ()=>{
+    await fetchUser()
 })

@@ -112,7 +112,7 @@ button{
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1.5px solid rgba(255, 255, 255, 0.14);
-  margin-top: 2%;
+  margin-top: 3%;
   text-align: center;
   color: var(--white);
   font-size: 2rem;
@@ -122,6 +122,14 @@ button{
 }
 button:hover{
   background: rgba(255, 255, 255, 0.3);
+}
+.main span{
+  justify-self: flex-end;
+  color: var(--white);
+  font-size: 1.2rem;
+  display: inline-block;
+  margin-top: 10%;
+  margin-bottom: 0;
 }
 
 /******************************************
@@ -149,5 +157,6 @@ button:hover{
   }
   button{
     font-weight: 400;
+    margin-top: 5%;
   }
 }
