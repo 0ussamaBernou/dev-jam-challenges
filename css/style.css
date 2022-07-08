@@ -16,24 +16,41 @@
 .clear {
   clear: both;
 }
+
 /******************************************
 /* VARIABLES
 /*******************************************/
 :root {
   --background: rgba(146, 64, 254, 1);
-  --aqua: rgb(13, 234, 253);
+  --aqua: rgb(19, 188, 214);
   --lavender: rgb(146, 64, 254);
+  --white: rgb(255, 255, 255);
+  --dark-blue: rgb(17, 0, 71);
+  --pum: rgb(136, 40, 135);
+  --purple: rgb(140, 80, 178);
+  --dark-purple: rgb(63, 0, 117);
+
+  font-size: 62.5%;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 /******************************************
 /* BASE STYLES
 /*******************************************/
 
-body {
-  background: linear-gradient(0.25turn, var(--aqua), var(--lavender));
+.main {
+/*   background: linear-gradient(0.4turn, var(--pum), var(--dark-purple)),
+  linear-gradient(0.8turn, var(--aqua), var(--purple)); */
+  background: linear-gradient(217deg, var(--aqua), rgba(255,0,0,0) 70.71%),
+            linear-gradient(127deg,var(--pum), rgba(0,255,0,0) 70.71%),
+            linear-gradient(336deg, var(--dark-purple), rgba(0,0,255,0) 70.71%);
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
+  padding: 10%;
 }
 
 /******************************************
@@ -43,17 +60,72 @@ body {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1.5px solid rgba(255, 255, 255, 0.14);
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  z-index: 0;
+  color: var(--white);
+  padding: 2%;
+}
+li{
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+}
+bold{
+  font-weight: 700;
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+h1{
+  font-weight: 700;
+  font-size: 4rem;
+  padding-bottom: 5%;
+  line-height: 4rem;
+}
+ul{
+  list-style: none;
+  padding: 0;
+}
+.image{
+  height: 100%;
+  border-radius: inherit;
+  box-shadow: -30px 4px 50px rgba(0, 0, 0, 0.1);
+
+}
+.info{
+  padding: 0 2% 0 2%;
 }
 
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+
+
+/******************************************
+/* MEDIA QUERIES
+/*******************************************/
+
+@media screen and (max-width: 900px) {
+  .main{
+    height: 100%;
+  }
+  .card{
+    flex-direction: column-reverse;
+    text-align: center;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .image{
+    width: 100%;
+    height: auto;
+  }
+}
