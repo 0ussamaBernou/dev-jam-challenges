@@ -1,0 +1,59 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+  clear: both;
+}
+/******************************************
+/* VARIABLES
+/*******************************************/
+:root {
+  --background: rgba(146, 64, 254, 1);
+  --aqua: rgb(13, 234, 253);
+  --lavender: rgb(146, 64, 254);
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  background: linear-gradient(0.25turn, var(--aqua), var(--lavender));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+.card {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
