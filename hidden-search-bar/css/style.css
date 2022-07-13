@@ -20,29 +20,44 @@
 /******************************************
 /* BASE STYLES
 /*******************************************/
+:root{
+  --background: rgb(55, 17, 76);
+}
 
 body {
   font-family: 'Lato', sans-serif;
-  
+  font-size: 62.5%;
 }
 
 
 /******************************************
 /* LAYOUT
 /*******************************************/
-.container{
-  background: rgb(55, 17, 76);
+.hero{
   height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  background: var(--background);
+  flex-wrap: wrap;
+}
+
+.container{
+  background: var(--background);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+  width: 100%;
 }
 .container *{
   border: 0;
   padding: 10px;
   height: 50px;
+  font-size: 1.5rem;
 }
 .hidden{
   width: 0;
@@ -61,6 +76,17 @@ input{
   justify-content: center;
   display: flex;
   flex-direction: column;
+}
+.footer{
+  background: var(--background);
+  align-self: flex-end;
+  color: white;
+  margin-bottom: 1%;
+  font-size: 0.8rem;
+}
+footer a{
+  color: aquamarine;
+  align-self: center;
 }
 
 /******************************************
