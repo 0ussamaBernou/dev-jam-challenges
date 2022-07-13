@@ -79,6 +79,7 @@ input{
   display: flex;
   flex-direction: column;
   background: var(--search-backg);
+  cursor: pointer;
 }
 .footer{
   background: var(--background);
